@@ -13,7 +13,7 @@ echo "$person1: yaa, I'm good. Thank you $person2"
 num1=$1
 num2=$2
 
-let "sum=num1+num2"
+let "sum=num1+num2" # also can be used like sum=$(($num1+$num2))
 
 echo " The output is $sum"
 
