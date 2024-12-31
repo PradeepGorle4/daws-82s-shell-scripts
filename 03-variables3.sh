@@ -12,7 +12,7 @@ read -p "Please input the 1st number: " num1
 
 read -p "Please input the 2nd number: " num2
 
-read -p "Please input the 3rd number: " sum
+read -p "Please input the sum : " sum
 
 output=$(($num1+$num2))
 
