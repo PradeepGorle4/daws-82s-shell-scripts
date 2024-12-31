@@ -22,7 +22,7 @@ echo "The output is $output"
 
 if [ $sum -ne $output ]
 then 
-    echo "Output not matched. you do not know Maths. Please learn maths"
+    echo " ERROR: Output not matched. you do not know Maths. Please learn maths"
     exit 1
 else
     echo "The value has not matched the output. you can proceed further with authentication"
