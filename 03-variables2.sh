@@ -25,7 +25,7 @@ then
     echo " ERROR: Output not matched. you do not know Maths. Please learn maths"
     exit 1 # This is the exit status, you can give anything other than 0 if you want to exit the script
 else
-    echo "The value has not matched the output. you can proceed further with authentication"
+    echo "The value has matched the output. you can proceed further with authentication"
 fi
 
 
