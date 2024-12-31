@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# This script prompts for user input
+# This script is improved version of the last variables scipt
 
 TIMESTAMP=$(date)
 
-# This script is improved version of the last variables scipt
-
 echo "The current date is $TIMESTAMP"
 
-read -p "Please input the 1st number: " num1
+#Here, -p is to prompt the user for input and read it and store it in num1 in same line. reduces length and increase readability.
+
+read -p "Please input the 1st number: " num1 
 
 read -p "Please input the 2nd number: " num2
 
@@ -26,13 +26,8 @@ else
     echo "The value has matched the output. you can proceed further with authentication"
 fi
 
+read -p "Please enter your username:" username
 
-echo "Please enter your username:"
-
-read username
-
-echo "please enter your password:"
-
-read -s password
+read -sp "please enter your password:" password # here the input should not be displayed on screen, so silent read -s
 
 echo "you are successfully authenticated"
