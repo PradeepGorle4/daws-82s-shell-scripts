@@ -2,6 +2,10 @@
 
 # This script prompts for user input
 
+TIMESTAMP=$(date)
+
+echo "The current date is $TIMESTAMP"
+
 echo "Please input 1st number: "
 read -s num1 # here num1 is the variable name
 
