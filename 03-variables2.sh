@@ -14,7 +14,7 @@ read -s num2 # here num2 is the variable name
 
 echo "Please enter the sum:"
 
-read -s sum # here sum is another variable name
+read sum # here sum is another variable name
 
 output=$(($num1+$num2))
 
