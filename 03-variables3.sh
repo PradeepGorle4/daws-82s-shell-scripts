@@ -4,17 +4,15 @@
 
 TIMESTAMP=$(date)
 
+# This script is improved version of the last variables scipt
+
 echo "The current date is $TIMESTAMP"
 
-echo "Please input 1st number: "
-read -s num1 # here num1 is the variable name
+read -p "Please input the 1st number: " num1
 
-echo "Please input 2nd number:"
-read -s num2 # here num2 is the variable name
+read -p "Please input the 2nd number: " num2
 
-echo "Please enter the sum:"
-
-read -s sum # here sum is another variable name
+read -p "Please input the 3rd number: " sum
 
 output=$(($num1+$num2))
 
