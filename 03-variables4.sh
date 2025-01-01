@@ -22,13 +22,13 @@ validate_integer () {
 #Here, -p is to prompt the user for input and read it and store it in num1 in same line. reduces length and increase readability.
 
 read -p "Please input the 1st number: " num1
-validate_integer "num1"
+validate_integer "$num1"
 
 read -p "Please input the 2nd number: " num2
-validate_integer "num2"
+validate_integer "$num2"
 
 read -p "Please input the sum : " sum
-validate_integer "sum"
+validate_integer "$sum"
 
 output=$(($num1+$num2))
 
