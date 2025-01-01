@@ -19,7 +19,7 @@ fi
 
 # The below are the functions we use in the scirpt
 
-precheck_&_installation () {          # This is for checking if the package is already installed and installing if not
+precheck () {          # This is for checking if the package is already installed and installing if not
     if [ $? -eq 0 ]
     then
         echo "$1....is already installed"
@@ -42,7 +42,7 @@ validate () {
 
 yum list installed git
 
-precheck_&_installation "git"
+precheck "git"
 
 validate "GIT"
 
@@ -51,7 +51,7 @@ validate "GIT"
 
 yum list installed mysql
 
-precheck_&_installation "mysql"
+precheck "mysql"
 
 validate "MYSQL"
 
@@ -59,7 +59,7 @@ validate "MYSQL"
 
 yum list installed nginx
 
-precheck_&_installation "nginx"
+precheck "nginx"
 
 validate "NGINX"
 
