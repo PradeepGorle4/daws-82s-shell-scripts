@@ -20,20 +20,20 @@ fi
 validate (){
     if [ $? -ne 0 ]
     then
-        echo -e "$Y Installing $1......$R FAILURE $N"
+        echo -e " $Y Installing $1...... $R FAILURE $N "
     else
-        echo -e "$Y Installing $1......$G SUCCESS $N"
+        echo -e " $Y Installing $1...... $G SUCCESS $N "
     fi
 }
 
 pre_check (){
     if [ $? -ne 0 ]
     then
-        echo -e "$Y Installing.....$1 $N"
+        echo -e " $Y Installing.....$1 $N "
         dnf install $1 -y
         validate $1
     else
-        echo -e "$Y Git is already installed $N"
+        echo -e " $Y Git is already installed $N "
     fi
 }
 
