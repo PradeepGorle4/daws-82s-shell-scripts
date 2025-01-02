@@ -13,7 +13,7 @@ N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
-    echo "$R ERROR::.......You are not ROOT USER $N"
+    echo $R "ERROR::.......You are not ROOT USER" $N
     exit 1
 fi
 
