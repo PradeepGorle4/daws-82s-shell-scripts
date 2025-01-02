@@ -23,6 +23,7 @@ validate (){
         echo "$Y Installing $1......$R FAILURE $N"
     else
         echo "$Y Installing $1......$G SUCCESS $N"
+    fi
 }
 
 pre_check (){
@@ -33,7 +34,7 @@ pre_check (){
         validate $1
     else
         echo "$Y Git is already installed" $N
-fi
+    fi
 }
 
 dnf list installed git
