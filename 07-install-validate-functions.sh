@@ -9,10 +9,8 @@ USERID=$(id -u)
 
 echo "you are running the script at $TIMESTAMP"
 
-if [ $USERID -eq 0 ]
+if [ $USERID -ne 0 ]
 then
-    echo "you are root user. you can proceed with installation"
-else
     echo "ERROR::....You are not root user"
     exit 1
 fi
@@ -25,6 +23,7 @@ precheck () {          # This is for checking if the package is already installe
         echo "$1....is already installed"
     else
         dnf install $1 -y
+        validate $1
     fi
 }
 
@@ -44,24 +43,17 @@ yum list installed git
 
 precheck "git"
 
-validate "GIT"
-
-
 #Let us intall mysql
 
 yum list installed mysql
 
 precheck "mysql"
 
-validate "MYSQL"
-
 # Let us install nginx
 
 yum list installed nginx
 
 precheck "nginx"
-
-validate "NGINX"
 
 echo "Thanks for using the script. Hope you had good experience"
 
