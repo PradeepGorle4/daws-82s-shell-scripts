@@ -6,14 +6,14 @@ TIMESTAMP=$(date +%Y-%m-%d)
 
 # Assigning variables to color codes
 
-R=\e[31m
+R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
-    echo $R "ERROR::.......You are not ROOT USER" $N
+    echo " $R ERROR::.......You are not ROOT USER $N "
     exit 1
 fi
 
