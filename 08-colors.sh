@@ -13,16 +13,16 @@ N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
-    echo " $R ERROR::.......You are not ROOT USER $N "
+    echo -e " $R ERROR::.......You are not ROOT USER $N "
     exit 1
 fi
 
 validate (){
     if [ $? -ne 0 ]
     then
-        echo "$Y Installing $1......$R FAILURE $N"
+        echo -e "$Y Installing $1......$R FAILURE $N"
     else
-        echo "$Y Installing $1......$G SUCCESS $N"
+        echo -e "$Y Installing $1......$G SUCCESS $N"
     fi
 }
 
