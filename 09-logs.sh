@@ -13,7 +13,7 @@ N="\e[0m"
 
 LOGS_FOLDER="/var/log/shellscript.logs"
 SCRIPT_NAME=$(echo $0 |cut -d "." -f1)
-LOG_FILE_Name="$LOGS_FOLDER-$SCRIPT_NAME-$TIMESTAMP"
+LOG_FILE_Name="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP"
 
 if [ $USERID -ne 0 ]
 then
