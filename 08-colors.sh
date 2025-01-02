@@ -29,11 +29,11 @@ validate (){
 pre_check (){
     if [ $? -ne 0 ]
     then
-        echo "$Y Installing.....$1 $N"
+        echo -e "$Y Installing.....$1 $N"
         dnf install $1 -y
         validate $1
     else
-        echo "$Y Git is already installed" $N
+        echo -e "$Y Git is already installed $N"
     fi
 }
 
