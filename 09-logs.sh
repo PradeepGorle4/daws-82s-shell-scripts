@@ -33,7 +33,6 @@ validate (){
 pre_check (){
     if [ $? -ne 0 ]
     then
-        echo -e " $Y Installing.....$1 $N "
         dnf install $1 -y &>>$LOG_FILE_Name
         validate $1
     else
