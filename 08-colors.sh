@@ -33,7 +33,7 @@ pre_check (){
         dnf install $1 -y
         validate $1
     else
-        echo -e " $Y Git is already installed $N "
+        echo -e " $Y $1 is already installed $N "
     fi
 }
 
