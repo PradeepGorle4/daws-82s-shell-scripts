@@ -44,4 +44,5 @@ for package in $@
 do
     dnf list installed $package &>>$LOG_FILE_Name
     pre_check $package &>>$LOG_FILE_Name
+    validate $package
 done
