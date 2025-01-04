@@ -31,12 +31,8 @@ validate () {
     fi
 }
 
-dnf list installed git
-validate git
-
-dnf list installed mysql
-validate mysql
-
-dnf list installed nginx
-validate nginx
-
+for package in $@
+do
+    dnf list installed $package
+    validate $package
+done
