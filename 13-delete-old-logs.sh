@@ -43,11 +43,10 @@ mkdir -p $log_folder
 
 old_files=$(find $source_dir -name "*.log" -mtime +14)
 
-echo "The files to be deleted are: $old_files"
+echo -e "The files to be deleted are:\n$old_files"
 
 for file in $old_files
 do
-    echo "Deleting $file"
     rm -rf $file
     validate "Deleting $file"
 done
