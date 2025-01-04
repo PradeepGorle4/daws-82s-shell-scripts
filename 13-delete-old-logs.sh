@@ -48,11 +48,18 @@ then
     echo -e "$G There are no old log files currently $N"
     exit 1
 else
-    echo -e " $R The files to be deleted are:\n$old_files $N"
+    echo -e "$R The files to be deleted are:\n$old_files $N"
 fi
+
+while read -r line
+do
+    rm -rf $line
+    validate "Deleting $line"
+done < $old_files
 
 # for file in $old_files
 # do
 #     rm -rf $file
 #     validate "Deleting $file"
 # done
+
