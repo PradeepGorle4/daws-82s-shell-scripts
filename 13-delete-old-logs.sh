@@ -53,7 +53,6 @@ fi
 
 while read -r file # here, we are not using line keyword as it is a reserved keyword for reading lines in files
 do
-    echo "deleting $file"
     rm -rf $file
     validate "Deleting $file"
 done <<< $old_files # <<< as we are reading the output of a variable, not a file. For file < is enough
