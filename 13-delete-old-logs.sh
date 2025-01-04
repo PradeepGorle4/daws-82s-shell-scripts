@@ -17,7 +17,7 @@ log_folder="/var/log/shell-script.logs"
 script_name=$(echo $0 | cut -d "." -f1)
 LOG_FILE=$log_folder/$script_name-$TIMESTAMP
 
-source_dir="/home/ec-user/app-logs"
+source_dir="/home/ec2-user/app-logs"
 
 echo "Script started executing at $TIMESTAMP" &>>$LOG_FILE
 
