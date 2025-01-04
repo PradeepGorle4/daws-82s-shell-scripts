@@ -9,6 +9,11 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
+
+log_folder="/var/log/shell-script.logs"
+script_name=$(echo $0 | cut -d "." - f1)
+LOG_FILE=$log_folder/$script_name-$TIMESTAMP
 
 if [ $userid -ne 0 ]
 then
@@ -21,7 +26,7 @@ validate () {
     then
         echo -e " $Y $1 is already installed $N"
     else
-        dnf install $1 -y
+        dnf install $1 -y &>> $LOG_FILE
         if [ $? -eq 0 ]
         then
             echo -e "Installing $1 ........ $G SUCCESS $N"
@@ -33,6 +38,6 @@ validate () {
 
 for package in $@
 do
-    dnf list installed $package
+    dnf list installed $package $>> $LOG_FILE
     validate $package
 done
