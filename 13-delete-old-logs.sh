@@ -51,11 +51,12 @@ else
     echo -e "$R The files to be deleted are:\n$old_files $N"
 fi
 
-while read -r line
+while read -r file # here, we are not using line keyword as it is a reserved keyword for reading lines in files
 do
-    rm -rf $line
-    validate "Deleting $line"
-done < $old_files
+    echo -e "Files to be deleted:\n$file"
+    #rm -rf $line
+    #validate "Deleting $line"
+done <<< $old_files # <<< as we are reading the output of a variable, not a file. For file < is enough
 
 # for file in $old_files
 # do

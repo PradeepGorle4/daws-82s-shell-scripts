@@ -3,4 +3,4 @@
 while read -r line
 do
     echo $line
-done < 13-delete-old-logs.sh
+done < 13-delete-old-logs.sh # < to read a file
