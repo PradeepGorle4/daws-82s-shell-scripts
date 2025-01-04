@@ -37,6 +37,8 @@ validate() {
     fi
 }
 
+mkdir -p $log_folder
+
 old_files=$(find . -name "*.log" -mtime +14)
 
 for file in $old_files
