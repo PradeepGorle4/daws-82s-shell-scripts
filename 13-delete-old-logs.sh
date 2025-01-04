@@ -45,9 +45,9 @@ old_files=$(find $source_dir -name "*.log" -mtime +14)
 
 echo "The files to be deleted are: $old_files"
 
-# for file in $old_files
-# do
-#     echo "Deleting $file"
-#     rm -rf $file
-#     validate "Deleting $file"
-# done
+for file in $old_files
+do
+    echo "Deleting $file"
+    rm -rf $file
+    validate "Deleting $file"
+done
