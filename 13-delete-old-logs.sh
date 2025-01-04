@@ -43,7 +43,7 @@ mkdir -p $log_folder
 
 old_files=$(find $source_dir -name "*.log" -mtime +14)
 
-if [ $(wc -l $old_files) -eq 0 ]
+if [ -z $old_files ]
 then
     echo -e "$G There are no old log files currently $N"
     exit 1
@@ -51,8 +51,8 @@ else
     echo -e " $R The files to be deleted are:\n$old_files $N"
 fi
 
-for file in $old_files
-do
-    rm -rf $file
-    validate "Deleting $file"
-done
+# for file in $old_files
+# do
+#     rm -rf $file
+#     validate "Deleting $file"
+# done
