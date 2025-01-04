@@ -17,7 +17,9 @@ log_folder="/var/log/shell-script.logs"
 script_name=$(echo $0 | cut -d "." -f1)
 LOG_FILE=$log_folder/$script_name-$TIMESTAMP
 
-echo "Script running at $TIMESTAMP"
+source_dir="/home/ec-user/app-logs"
+
+echo "Script started executing at $TIMESTAMP" &>>$LOG_FILE
 
 check_root() {
     if [ $USERID -ne 0 ]
@@ -39,11 +41,13 @@ validate() {
 
 mkdir -p $log_folder
 
-old_files=$(find . -name "*.log" -mtime +14)
+old_files=$(find $source_dir -name "*.log" -mtime +14)
 
-for file in $old_files
-do
-    echo "Deleting $file"
-    rm -rf $file
-    validate "Deleting $file"
-done
+echo "The files to be deleted are: $old_files"
+
+# for file in $old_files
+# do
+#     echo "Deleting $file"
+#     rm -rf $file
+#     validate "Deleting $file"
+# done
