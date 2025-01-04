@@ -12,7 +12,7 @@ N="\e[0m"
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
 
 log_folder="/var/log/shell-script.logs"
-script_name=$(echo $0 | cut -d "." - f1)
+script_name=$(echo $0 | cut -d "." -f1)
 LOG_FILE=$log_folder/$script_name-$TIMESTAMP
 
 if [ $userid -ne 0 ]
