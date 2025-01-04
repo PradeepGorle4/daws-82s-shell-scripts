@@ -13,6 +13,10 @@ N="\e[0m"
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
 
+log_folder="/var/log/shell-script.logs"
+script_name=$(echo $0 | cut -d "." -f1)
+LOG_FILE=$log_folder/$script_name-$TIMESTAMP
+
 echo "Script running at $TIMESTAMP"
 
 check_root() {
@@ -32,9 +36,6 @@ validate() {
         echo "$1 .......SUCCESS"
     fi
 }
-
-mkdir -p $LOGS_FOLDER
-validate "Creating logs folder"
 
 old_files=$(find . -name "*.log" -mtime +14)
 
