@@ -1,15 +1,12 @@
 #!/bin/bash
 
-userid=(id -u)
+userid=$(id -u)
 
-
-check_root () {
-    if [ $? -ne 0 ]
-    then
-        echo "ERROR: you are not root user"
-        exit 1
-    fi
-}
+if [ $userid -ne 0 ]
+then
+    echo "ERROR: you are not root user"
+    exit 1
+fi
 
 validate () {
     if [ $? -eq 0 ]
