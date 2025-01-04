@@ -43,7 +43,7 @@ mkdir -p $log_folder
 
 old_files=$(find $source_dir -name "*.log" -mtime +14)
 
-if [ -z $old_files ]
+if [ -z $old_files ];
 then
     echo -e "$G There are no old log files currently $N"
     exit 1
