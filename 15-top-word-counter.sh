@@ -15,4 +15,7 @@ do
 	do 
         echo "word=$word"
     done
-done < 04-arrays.sh
+done < abc.txt
+
+# unable to continue further, will come back here after other scripts
+
