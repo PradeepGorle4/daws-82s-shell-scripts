@@ -12,5 +12,5 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
 while -r read line
 do
  for word in $line
-	echo "word=$word"
+	echo "word='$word'"
 done < 04-arrays.sh
