@@ -20,7 +20,7 @@ validate() {
     fi
 }
 
-read -p "Please enter full file path"\n source_path
+read -p "Please enter full file path"$'\n' source_path
 
 # source_dir="/home/ec2-user/daws-82s-shell-scripts"
 # source_file=$source_dir/normal.txt
