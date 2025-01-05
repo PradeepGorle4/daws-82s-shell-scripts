@@ -20,10 +20,12 @@ validate() {
     fi
 }
 
-source_dir="/home/ec2-user/daws-82s-shell-scripts"
-source_file=$source_dir/normal.txt
+read -p "Please enter full file path" source_path
 
-if [ ! -f "$source_file" ] # ! means not, if file source_file not exists then echo "Not exist"
+# source_dir="/home/ec2-user/daws-82s-shell-scripts"
+# source_file=$source_dir/normal.txt
+
+if [ ! -f "$source_path" ] # ! means not, if file source_file not exists then echo "Not exist"
 then
     echo "File not exist"
     exit 1
