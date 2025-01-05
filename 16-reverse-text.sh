@@ -21,9 +21,9 @@ validate() {
 source_dir="/home/ec2-user/daws-82s-shell-scripts"
 source_file=$source_dir/normal.txt
 
-if [ ! -f "$source_file" ]
+if [ ! -f "$source_file" ] # ! means not, if file source_file not exists then echo "Not exist"
 then
-    echo "File not exists"
+    echo "File not exist"
     exit 1
 fi
 
