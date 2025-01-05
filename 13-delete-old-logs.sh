@@ -9,8 +9,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-set -x # disaplays the command before executing, helpful for debugging
-# Storing the logs
+# set -x # disaplays the command before executing, helpful for debugging
+# # Storing the logs
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
 
@@ -43,7 +43,7 @@ validate() {
 mkdir -p $log_folder
 
 
-if [ -d $source_dir ]
+if [ -d $source_dir ] # meaning if dir exists
 then
     echo "source_dir exist"
 else
@@ -53,7 +53,7 @@ fi
 
 old_files=$(find $source_dir -name "*.log" -mtime +14)
 
-if [ -z $old_files ];
+if [ -z $old_files ] # -z checks if the file/output is empty which in this case is old_files
 then
     echo -e "$G There are no old log files currently $N"
     exit 1
