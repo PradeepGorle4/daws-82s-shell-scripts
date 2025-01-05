@@ -34,7 +34,8 @@ fi
 while read -r line
 do
     echo "$line" | rev >> reverse.txt # rev cmd reverse the content of each line and appends to the txt file here
-    validate "reversing the content"
 done < $source_file
+
+validate "reversing the content"
 
 
