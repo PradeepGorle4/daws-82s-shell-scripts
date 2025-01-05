@@ -19,6 +19,12 @@ validate() {
 source_dir="/home/ec2-user/daws-82s-shell-scripts"
 source_file=$source_dir/normal.txt
 
+if [ ! -f "$source_file" ]
+then
+    echo "File not exists"
+    exit 1
+fi
+
 while read -r line
 do
     echo "$line" | rev >> reverse.txt # rev cmd reverse the content of each line and appends to the txt file here
