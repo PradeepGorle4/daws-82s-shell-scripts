@@ -9,6 +9,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+set -x
 # Storing the logs
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
@@ -41,9 +42,12 @@ validate() {
 
 mkdir -p $log_folder
 
--d $source_dir
-if [ $? -ne 0 ]; then
-    echo "source_dir does not exist"
+
+if [ -d $source_dir ]
+then
+    echo "source_dir exist"
+else
+    echo "Source dir does not exist"
     exit 1
 fi
 
