@@ -9,7 +9,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-set -x
+set -x &>>$LOG_FILE
 # Storing the logs
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
