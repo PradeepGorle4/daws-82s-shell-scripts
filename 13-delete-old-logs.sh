@@ -41,6 +41,12 @@ validate() {
 
 mkdir -p $log_folder
 
+-d $source_dir
+if [ $? -ne 0 ]; then
+    echo "source_dir does not exist"
+    exit 1
+fi
+
 old_files=$(find $source_dir -name "*.log" -mtime +14)
 
 if [ -z $old_files ];
