@@ -18,7 +18,13 @@ validate() {
         echo -e "$1........ $G SUCCESS $N"
 }
 
-source_file="/home/ec2-user/daws-82s-shell-scripts/passwd.txt"
+read -p "Please enter the full file path"$'\n' source_file
+
+if [ ! -f "$source_file" ]
+then
+    echo "File not exist, please provide correct file path"
+    exit 1
+fi
 
 read -p "Please enter the word you want to replace" word_to_replace
 read -p "Please enter the word to be replace with" Replace_with

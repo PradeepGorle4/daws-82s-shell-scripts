@@ -27,7 +27,7 @@ read -p "Please enter full file path"$'\n' source_file # $'\n' prompts input in 
 
 if [ ! -f "$source_file" ] # ! means not, if file source_file not exists then echo "Not exist"
 then
-    echo "File not exist"
+    echo "File not exist, please provide correct file path"
     exit 1
 fi
 
