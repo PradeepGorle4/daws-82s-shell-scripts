@@ -8,7 +8,7 @@ echo "The current date is $TIMESTAMP"
 
 #Here, -p is to prompt the user for input and read it and store it in num1 in same line. reduces length and increase readability.
 
-read -p "Please input the 1st number: " num1 
+read -p "Please input the 1st number: "\n num1 # \n prompts in next line
 
 read -p "Please input the 2nd number: " num2
 
