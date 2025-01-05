@@ -25,7 +25,7 @@ All_text_files=$(find $source_dir -name "*.txt")
 
 for file in $All_text_files
 do
-    mv $file $source_dir/$TIMESTAMP_$file.txt
+    mv $file $TIMESTAMP_$file.txt
 done
 
 validate "renaming $file to $TIMESTAMP_$file.txt"
