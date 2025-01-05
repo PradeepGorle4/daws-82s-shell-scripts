@@ -21,6 +21,12 @@ validate() {
 
 read -p "Please enter the source directory"$'\n' source_dir
 
+if [ ! -f "$source_dir" ]
+then
+    echo "Directory not exist, please provide correct directory path"
+    exit 1
+fi
+
 All_text_files=$(find $source_dir -name "*.txt")
 
 for file in $All_text_files
