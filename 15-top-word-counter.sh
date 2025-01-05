@@ -9,7 +9,7 @@ N="\e[0m"
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
 
-while -r read line
+while read -r line
 do
     for word in $line
 	do 
