@@ -16,6 +16,7 @@ validate() {
         exit 1
     else
         echo -e "$1........ $G SUCCESS $N"
+    fi
 }
 
 read -p "Please enter the full file path"$'\n' source_file
