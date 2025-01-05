@@ -9,7 +9,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-set -x &>>$LOG_FILE # disaplays the command before executing, helpful for debugging
+set -x # disaplays the command before executing, helpful for debugging
 # Storing the logs
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
