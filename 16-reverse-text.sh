@@ -7,6 +7,8 @@ N="\e[0m"
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
 
+echo "Script running at $TIMESTAMP "
+
 # Q - Write a script to reverse the content of a text file line by line and save it to a new file.
 validate() {
     if [ $? -ne 0 ]
