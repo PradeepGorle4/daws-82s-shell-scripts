@@ -10,10 +10,12 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M)
 # Q - Write a script to reverse the content of a text file line by line and save it to a new file.
 validate() {
     if [ $? -ne 0 ]
-    do
+    then
         echo -e "$1........$R FAILED $N"
+        exit 1
+    else
         echo -e "$1........$G SUCCESS $N"
-    done
+    fi
 }
 
 source_dir="/home/ec2-user/daws-82s-shell-scripts"
