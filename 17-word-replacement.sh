@@ -27,8 +27,8 @@ then
     exit 1
 fi
 
-read -p "Please enter the word you want to replace" word_to_replace
-read -p "Please enter the word to be replace with" Replace_with
+read -p "Please enter the word you want to replace"$'\n' word_to_replace
+read -p "Please enter the word to be replace with"$'\n' Replace_with
 
 sed -i s/$word_to_replace/SBIN/g $source_file
 validate "Replacing $word_to_replace with $Replace_with"
