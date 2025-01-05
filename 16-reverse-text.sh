@@ -22,9 +22,6 @@ validate() {
 
 read -p "Please enter full file path"$'\n' source_file # $'\n' prompts input in new line. -p is prompt and stores in source_file
 
-# source_dir="/home/ec2-user/daws-82s-shell-scripts"
-# source_file=$source_dir/normal.txt
-
 if [ ! -f "$source_file" ] # ! means not, if file source_file not exists then echo "Not exist"
 then
     echo "File not exist, please provide correct file path"
