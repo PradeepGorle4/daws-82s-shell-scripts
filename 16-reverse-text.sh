@@ -13,6 +13,7 @@ validate() {
     do
         echo -e "$1........$R FAILED $N"
         echo -e "$1........$G SUCCESS $N"
+    done
 }
 
 source_dir="/home/ec2-user/daws-82s-shell-scripts"
@@ -20,7 +21,7 @@ source_file=$source_dir/normal.txt
 
 while read -r line
 do
-	echo "$line" | rev >> reverse.txt # rev cmd reverse the content of each line and appends to the txt file here
+    echo "$line" | rev >> reverse.txt # rev cmd reverse the content of each line and appends to the txt file here
     validate "reversing the content"
 done < $source_file
 
