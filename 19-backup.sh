@@ -54,4 +54,4 @@ then
         exit 1
     fi
 
- # The script still needs logging and some improvements which will be done later
+ # The script still needs logging and some improvements which will be done later.
