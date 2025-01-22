@@ -14,9 +14,9 @@ echo "The current date is $TIMESTAMP"
 
 validate_integer () {
     local input=$1 # local is just to mention that this assignment only works in this function.
-    if ! [ $input =~ ^[0-9]+$ ]
+    if ! [[ $input =~ ^[0-9]+$ ]]
     then
-        echo -e" $R ERROR: The input should be in numbers. Please recheck your input or enter properly $N "
+        echo -e " $R ERROR: The input should be in numbers. Please recheck your input or enter properly $N "
         exit 1
     fi
 }
