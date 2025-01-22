@@ -4,6 +4,10 @@
 
 TIMESTAMP=$(date)
 
+R="\e[31m"
+G="\e[32m]"
+N="\e[0m"
+
 echo "The current date is $TIMESTAMP"
 
 #Here, -p is to prompt the user for input and read it and store it in num1 in same line. reduces length and increase readability.
@@ -31,3 +35,11 @@ read -p "Please enter your username:" username
 read -sp "please enter your password:" password # here the input should not be displayed on screen, so silent read -s
 
 echo "you are successfully authenticated"
+
+
+validate_integer () {
+    local input=$1 # local is just to mention that this assignment only works in this function.
+    if ! [ $input =~ ^[0-9]+$ ]
+    then
+        echo " $R ERROR: The input should be in numbers. Please recheck your input or enter properly $N "
+}
