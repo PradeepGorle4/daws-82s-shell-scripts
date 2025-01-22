@@ -35,3 +35,5 @@ do
 done
 
 validate "renaming $file to $TIMESTAMP_$file.txt"
+
+# This is done
