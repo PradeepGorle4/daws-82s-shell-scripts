@@ -10,9 +10,9 @@ echo "The current date is $TIMESTAMP"
 
 read -p "Please input the 1st number: "$'\n' num1 # $'\n' prompts in next line
 
-read -p "Please input the 2nd number: " num2
+read -p "Please input the 2nd number: "$'\n' num2
 
-read -p "Please input the sum : " sum
+read -p "Please input the sum : "$'\n' sum
 
 output=$(($num1+$num2))
 
