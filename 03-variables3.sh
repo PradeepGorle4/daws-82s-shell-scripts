@@ -16,7 +16,7 @@ validate_integer () {
     local input=$1 # local is just to mention that this assignment only works in this function.
     if ! [ $input =~ ^[0-9]+$ ]
     then
-        echo " $R ERROR: The input should be in numbers. Please recheck your input or enter properly $N "
+        echo -e" $R ERROR: The input should be in numbers. Please recheck your input or enter properly $N "
         exit 1
     fi
 }
@@ -36,7 +36,7 @@ echo "The output is $output"
 
 if [ $sum -ne $output ]
 then 
-    echo " ERROR: Output not matched. you do not know Maths. Please learn maths"
+    echo -e" $R ERROR: Output not matched. you do not know Maths. Please learn maths $N"
     exit 1 # This is the exit status, you can give anything other than 0 if you want to exit the script
 else
     echo "The value has matched the output. you can proceed further with authentication"
