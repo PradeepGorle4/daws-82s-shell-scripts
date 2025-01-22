@@ -13,10 +13,13 @@ echo "The current date is $TIMESTAMP"
 #Here, -p is to prompt the user for input and read it and store it in num1 in same line. reduces length and increase readability.
 
 read -p "Please input the 1st number: "$'\n' num1 # $'\n' prompts in next line
+validate_integer $num1
 
 read -p "Please input the 2nd number: "$'\n' num2
+validate_integer $num2
 
 read -p "Please input the sum : "$'\n' sum
+validate_integer $sum
 
 output=$(($num1+$num2))
 
